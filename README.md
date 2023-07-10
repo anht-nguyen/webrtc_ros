@@ -15,7 +15,7 @@ webrtc_ros is released with a BSD license. For full terms and conditions, see th
 ### Authors
 See the [AUTHORS](AUTHORS.md) file for a full list of contributors.
 
-## How to build
+### How to build
 - git clone in catkin_ws/src folder
 
 - Install jsoncpp dependency
