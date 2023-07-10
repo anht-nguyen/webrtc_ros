@@ -25,4 +25,4 @@ sudo apt-get install libjsoncpp-dev
 - (optional) Enable python scripts sourcing python2 environment to run:
 sudo apt-get install python-is-python3
 
-catkin build webrtc_ros
+- catkin build webrtc_ros
