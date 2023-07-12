@@ -18,12 +18,9 @@ See the [AUTHORS](AUTHORS.md) file for a full list of contributors.
 ### How to build
 - git clone in catkin_ws/src folder. For ROS Melodic: clone this repo: https://github.com/RobotWebTools/webrtc_ros.git, use "develop" branch, and checkout "a2a19da" commit.
 
-- Install jsoncpp dependency
+- Install dependencies
   
-sudo apt-get install libjsoncpp-dev
-
-- (optional) Enable python scripts sourcing python2 environment to run:
-sudo apt-get install python-is-python3
+sudo apt-get install libjsoncpp-dev python3-catkin-tools libgtk-3-dev python-is-python3
 
 - For Ubuntu 18 and ROS Melodic (recommended, more compatible): sudo apt-get install ros-melodic-webrtc. This will install an ROS library of webrtc. Then, Add an empty file named CATKIN_IGNORE in webrtc_ros/webrtc folder.
 
