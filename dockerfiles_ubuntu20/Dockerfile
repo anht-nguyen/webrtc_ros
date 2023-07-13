@@ -15,7 +15,7 @@ RUN useradd -m $ROS_USER && \
 
 RUN apt-get update -y
 
-RUN sudo apt-get install -y -qq python-rosdep python-pip python3-pip libjsoncpp-dev python3-catkin-tools libgtk-3-dev
+RUN sudo apt-get install -y -qq python3-rosdep python3-pip python3-pip libjsoncpp-dev python3-catkin-tools libgtk-3-dev git
 
 RUN mkdir /home/$ROS_USER/catkin_ws && \
         chown -R $ROS_USER:$ROS_USER /home/$ROS_USER/catkin_ws
