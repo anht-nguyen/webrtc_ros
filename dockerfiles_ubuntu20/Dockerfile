@@ -30,17 +30,17 @@ RUN git clone --single-branch --branch ros1-develop https://github.com/fkie/asyn
 
 RUN git clone --single-branch --branch ubuntu20 https://github.com/anht-nguyen/webrtc_ros.git
 
-WORKDIR /home/$ROS_USER/catkin_ws
-RUN /ros_entrypoint.sh catkin build
+# WORKDIR /home/$ROS_USER/catkin_ws
+# RUN /ros_entrypoint.sh catkin build
 
-USER root
-RUN head -n -1 /ros_entrypoint.sh > /tmp.sh \
-    && mv /tmp.sh /ros_entrypoint.sh \
-    && echo 'source "/home/$ROS_USER/catkin_ws/devel/setup.bash"' >> /ros_entrypoint.sh \
-    && echo 'exec $@' >> /ros_entrypoint.sh \
-    && chmod +x /ros_entrypoint.sh
+# USER root
+# RUN head -n -1 /ros_entrypoint.sh > /tmp.sh \
+#     && mv /tmp.sh /ros_entrypoint.sh \
+#     && echo 'source "/home/$ROS_USER/catkin_ws/devel/setup.bash"' >> /ros_entrypoint.sh \
+#     && echo 'exec $@' >> /ros_entrypoint.sh \
+#     && chmod +x /ros_entrypoint.sh
 
-USER $ROS_USER
+# USER $ROS_USER
 
-ENTRYPOINT ["/ros_entrypoint.sh"]
+# ENTRYPOINT ["/ros_entrypoint.sh"]
 CMD ["bash"]
